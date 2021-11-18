@@ -4,7 +4,7 @@ RUN apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpi
 
 # This is our work directory
 WORKDIR /work/
-COPY target/demo.jar /work/application.jar
+COPY stg-build/demo.jar /work/application.jar
 
 # set up permissions for user `1001`
 RUN chmod 775 /work /work/application.jar \
